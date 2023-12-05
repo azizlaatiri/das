@@ -1,16 +1,18 @@
-function tri(arr) {
-    for (var i = 0; i < arr.length - 1; i++) {
-        for (var j = 0; j < arr.length - i - 1; j++) {
-            var a = parseInt(arr[j])
-            var b = parseInt(arr[j + 1])
+function palindrome(a) {
+    var ch = ""
+    var palindrome = false
 
-            if (a > b) {
-                var temp = arr[j]
-                arr[j] = arr[j + 1]
-                arr[j + 1] = temp
-            }
-        }
+    for (var i = a.length - 1; i >= 0; i--) {
+        ch = ch + a[i]
     }
 
-    return arr;
+    if (ch === a) {
+        palindrome = true
+    }
+
+    if (palindrome) {
+        console.log("palindrome")
+    } else {
+        console.log("n'est pas palindrome")
+    }
 }
